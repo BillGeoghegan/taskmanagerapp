@@ -1,0 +1,74 @@
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(150deg,  #a09090, #818fb9);
+    overflow-x: hidden;
+    transition: 1s;
+    padding: 0;
+    margin: 0px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.5), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu a {
+    padding: 22px 22px 22px 52px;
+    text-decoration: none !important;
+    font-size: 14px;
+    color: #e7e3e3;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.menu i {
+    padding: 0px 30px 0px 5px;
+}
+
+.menu a:hover {
+    color: #f1f1f1;
+    background-color: #1d2029;
+    padding-left: 42px;
+}
+
+.menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#app {
+    transition: margin-left 1s, opacity 1s;
+}
+
+body{
+    overflow-x: hidden;
+    background: linear-gradient(150deg, #aaa, #666, #111, #000,#475c90);
+}
+
+.appBody {
+    width: 100vw;
+    overflow-x: hidden;
+    transition: margin-left 1s, opacity 1s;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.open-menu-button {
+    color: #FFF;
+    font-size: 4rem;
+    position: absolute;
+    padding: 10px;
+    padding-left: 15px;
+    cursor: pointer;
+    transition: opacity 1s;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

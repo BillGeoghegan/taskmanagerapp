@@ -1,0 +1,24 @@
+.header {
+    height: 80px;
+    background: linear-gradient(150deg,  #a09090, #818fb9);
+}
+
+.header__content{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.header__title{
+    color: #FFF;
+    text-decoration: none;
+    transition: margin-left 1s;
+    h1{
+        margin: 0;
+    }
+    @media(max-width: $desktop-breakpoint) {
+        margin-left: 50px;
+    }
+}
+
