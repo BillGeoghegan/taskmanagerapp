@@ -38,5 +38,5 @@ export const closeMenuNav = () => {
 export const clickAwayMenu = () => {
     if($('#menu').width() >= 50){
         closeMenu();
-    }
+    };
 };

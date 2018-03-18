@@ -3,16 +3,51 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { closeMenu, closeMenuNav } from '../actions/animations';
 import { UserInfo } from './UserInfo';
+import { startLogout } from '../actions/auth';
 
-export default () => (
+export const Menu = ({ startLogout }) => (
     <menu id="menu" className="menu">
         <UserInfo/>
-        {/* <img src="/images/usericon.png" className="userImage"/>
-        <h2><center>Bill Geoghegan</center></h2><br/> */}
-        {/* <a href="javascript:void(0)" className="closebtn" onClick={closeMenu}>&times;</a> */}
-        <Link to="/dashboard" onClick={closeMenuNav}><i className="glyphicon glyphicon-home"></i>&nbsp; Dashboard</Link>
-        <a href="#"><i className="glyphicon glyphicon-file"></i>&nbsp; Add Task</a>
-        <a href="#"><i className="glyphicon glyphicon-user"></i>&nbsp; Clients</a>
-        <a href="mailto:billgeoghegan92@gmail.com"><i className="glyphicon glyphicon-phone"></i>&nbsp; Contact</a>
+        <Link to="/dashboard" onClick={closeMenuNav}>
+            <i className="fas fa-home"></i>
+            &nbsp; Dashboard
+        </Link>
+        <Link to="/create" onClick={closeMenuNav}>
+            <i className="fas fa-edit"></i>
+            &nbsp; Add Task
+        </Link>
+        <Link to="/help" onClick={closeMenuNav}>
+            <i className="fas fa-question-circle"></i>
+            &nbsp; Help
+        </Link>
+        <a href="https://github.com/BillGeoghegan/taskmanagerapp" onClick={closeMenuNav}>
+            <i className="fab fa-github-square"></i>
+            &nbsp; GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/billgeoghegan/" onClick={closeMenuNav}>
+            <i className="fab fa-linkedin"></i>
+            &nbsp; LinkedIn
+        </a>
+        <a href="https://twitter.com/billy_geoghegan" onClick={closeMenuNav}>
+            <i className="fab fa-twitter-square"></i>
+            &nbsp; Twitter
+        </a>
+        <a href="mailto:billgeoghegan92@gmail.com">
+            <i className="fas fa-envelope"></i>
+            &nbsp; Contact
+        </a>
+        <a href="javascript:void(0)" onClick={function(event){ closeMenuNav(); startLogout()}}>
+            <i className="fas fa-sign-out-alt"></i>
+            &nbsp; Logout
+        </a>
     </menu>
 );
+
+
+
+const mapDispatchToProps = (dispatch) => ({
+    startLogout: () => dispatch(startLogout())
+});
+
+export default connect(undefined, mapDispatchToProps)(Menu);
+

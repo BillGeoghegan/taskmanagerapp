@@ -7,6 +7,7 @@ export const login = (uid) => ({
 });
 
 export const startLogin = (uid) => {
+  
   return () => {
     return firebase.auth().signInWithPopup(googleAuthProvider).then(function(result){
       const username = result.user.displayName;
