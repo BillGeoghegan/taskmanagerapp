@@ -13,5 +13,13 @@
     margin-right: $s-size;
     @media (max-width: $desktop-breakpoint) {
         margin: 0 0 $s-size 0;
+        width: 100%;
+        align-content: center;
+    }
+}
+
+.input-group__item input,.input-group__item select {
+    @media (max-width: $desktop-breakpoint) {
+        width: 336px;
     }
 }
