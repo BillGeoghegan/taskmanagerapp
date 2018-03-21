@@ -5,7 +5,9 @@ import $ from "jquery";
 
 export const openMenu = () => {
     $('#menu').width(250);
-    $('#app').css('marginLeft','250px');
+    if($( window ).width() >= 800){
+        $('#app').css('marginLeft','250px');
+    }
     $('#openMenuButton').css('opacity',0);
     $('#appBody').css('opacity',0.5);
     $('#appBody').children().css('pointerEvents','none');
