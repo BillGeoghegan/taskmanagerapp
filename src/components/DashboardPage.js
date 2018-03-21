@@ -7,7 +7,7 @@ const DashboardPage = () => (
     <div>
         <TasksSummary/>
         <TaskListFilters/>
-        <TaskList />
+        <TaskList/>
     </div>
 );
 

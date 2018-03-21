@@ -40,6 +40,7 @@ export const Menu = ({ startLogout }) => (
             <i className="fas fa-sign-out-alt"></i>
             &nbsp; Logout
         </a>
+        <p className="created-by">Created by Bill Geoghegan</p>
     </menu>
 );
 

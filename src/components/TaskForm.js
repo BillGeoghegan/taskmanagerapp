@@ -43,8 +43,7 @@ export default class TaskForm extends React.Component {
                 createdAt: this.state.createdAt.valueOf(),
                 dueDate: this.state.dueDate.valueOf(),
                 note: this.state.note
-            })
-            console.log('Submitted.');
+            });
         }
     };
     render() {

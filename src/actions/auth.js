@@ -7,7 +7,6 @@ export const login = (uid) => ({
 });
 
 export const startLogin = (uid) => {
-  
   return () => {
     return firebase.auth().signInWithPopup(googleAuthProvider).then(function(result){
       const username = result.user.displayName;
@@ -28,8 +27,20 @@ export const startLogout = () => {
   };
 };
 
-export const getUserName = (uid) => {
-  return () => {
-    return "test"
-  };
-}
+export const getUserName = () => {
+  var user = firebase.auth().currentUser.displayName;
+  if(user){
+    return user;
+  }else{
+    return 'Anonymous';
+  }
+};
+
+export const getUserProfile = () => {
+  var user = firebase.auth().currentUser.photoURL;
+  if(user){
+    return user;
+  }else{
+    return '/images/usericon.png';
+  }
+};
