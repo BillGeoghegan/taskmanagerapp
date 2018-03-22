@@ -11,6 +11,8 @@ export default class TaskForm extends React.Component {
             note: props.task ? props.task.note : '',
             createdAt: props.task ? moment(props.task.createdAt) : moment(),
             dueDate: props.task ? moment(props.task.dueDate) : moment(),
+            status: props.task ? props.task.status : '',
+            category: props.task ? props.task.category : '',
             calendarFocused: false,
             error: undefined
         };
@@ -28,21 +30,30 @@ export default class TaskForm extends React.Component {
             this.setState( () => ({dueDate}));
         }
     };
+    onStatusChange = (e) => {
+        const status = e.target.value.toString();
+        this.setState(() => ({ status }));
+    };
+    onCategoryChange = (e) => {
+        const category = e.target.value.toString();
+        this.setState(() => ({ category }));
+    };
     onFocusChange = ({focused}) => {
-        this.setState( () => ({calendarFocused: focused}));
+        this.setState(() => ({calendarFocused: focused}));
     };
     onSubmit = (e) => {
         e.preventDefault();
         if(!this.state.description){
-            this.setState( () => ({error: 'Please provide description of task.'}));
+            this.setState(() => ({error: 'Please provide description of task.'}));
         } else {
-            // Clear the error
             this.setState( () => ({error: undefined}));
             this.props.onSubmit({
                 description: this.state.description,
                 createdAt: this.state.createdAt.valueOf(),
                 dueDate: this.state.dueDate.valueOf(),
-                note: this.state.note
+                note: this.state.note,
+                status: this.state.status,
+                category: this.state.category
             });
         }
     };
@@ -73,6 +84,35 @@ export default class TaskForm extends React.Component {
                         onChange={this.onNoteChange}
                     >
                     </textarea>
+                    <div className="select-dropdowns">
+                        <p>Status:</p>
+                        <select
+                            className="select-option"
+                            value={this.state.status}
+                            onChange={this.onStatusChange}
+                        >
+                            <option value="Created" className="option good">Created</option>
+                            <option value="Ongoing" className="option good">Ongoing</option>
+                            <option value="Onhold" className="option bad">On hold</option>
+                            <option value="Invalid" className="option bad">Invalid</option>
+                            <option value="Critical" className="option bad">Critical</option>
+                            <option value="Complete" className="option good">Complete</option>
+                            <option value="Closed" className="option neutral">Closed</option>
+                        </select>
+                        <p>Category:</p>
+                        <select
+                            className="select-option"
+                            value={this.state.category}
+                            onChange={this.onCategoryChange}
+                        >
+                            <option value=""></option>
+                            <option value="Personal">Personal</option>
+                            <option value="Professional">Professional</option>
+                            <option value="Family">Family</option>
+                            <option value="Leisure">Leisure</option>
+                            <option value="Multiple">Multiple</option>
+                        </select>
+                    </div>
                     <div>
                         <button
                             className="button"

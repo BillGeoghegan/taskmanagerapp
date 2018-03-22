@@ -14,9 +14,11 @@ export const startAddTask = (taskData = {}) => {
       description = '',
       note = '',
       createdAt = 0,
-      dueDate = 0
+      dueDate = 0,
+      status = '',
+      category = ''
     } = taskData;
-    const task = { description, note, createdAt, dueDate};
+    const task = { description, note, createdAt, dueDate, status, category};
     return database.ref(`users/${uid}/tasks`).push(task).then((ref) => {
       dispatch(addTask({
         id: ref.key,
@@ -43,7 +45,7 @@ export const startRemoveTask = ({ id } = {}) => {
 
 // EDIT_TASK
 export const editTask = (id, updates) => ({
-  type: 'EDIT_TASKS',
+  type: 'EDIT_TASK',
   id,
   updates
 });

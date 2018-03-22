@@ -2,8 +2,8 @@ import React from 'react';
 
 const TermsPage = () => (
     <div>
-        This is from my Help page
+        This is from my Terms page
     </div>
 );
 
-export default HelpPage;
+export default TermsPage;

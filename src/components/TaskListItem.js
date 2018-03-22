@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import numeral from 'numeral';
 
-const TaskListItem = ({dispatch, id, description = '', note = '', createdAt = 0, dueDate = 0}) => {
+const TaskListItem = ({dispatch, id, description = '', note = '', createdAt = 0, dueDate = 0, status = '', category = ''}) => {
     return (
             <Link to={`/edit/${id}`} className="list-item">
                 <div>

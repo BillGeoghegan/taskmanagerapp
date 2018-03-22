@@ -12,18 +12,43 @@
 
 .textarea {
     @extend .text-input;
-    height: 10rem;
+    height: 20rem;
 }
 
 .DateInput {
     background: none !important;
 }
 
-.header__content{
-    input, select, .DateRangePickerInput, input::placeholder{
-        background: #494e5a;
-        border: none;
-        color: #fff !important;
-        border-radius: 15px;
-    }
+.select-option{
+    width: 48%;
+    display: inline-block;
+    padding: 15px;
+}
+
+.select-dropdowns{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    p{
+        padding: 10px;
+    };
+    border: 1px solid #CACCCD;
+    background: #f5f5f5;
+}
+
+.input-container {
+    padding: 5px;
+    border: 1px solid #CACCCD;
+    background: #ece4e4;
+}
+
+.good {
+    background: rgb(183, 243, 203);
+}
+.bad {
+    background: rgb(235, 174, 174);
+}
+.neutral {
+    background: rgb(165, 172, 172);
 }

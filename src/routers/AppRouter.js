@@ -3,6 +3,7 @@ import createHistory from 'history/createBrowserHistory';
 import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import NotFoundPage from "../components/NotFoundPage";
 import HelpPage from "../components/HelpPage";
+import TermsPage from "../components/TermsPage";
 import LoginPage from "../components/LoginPage";
 import DashboardPage from "../components/DashboardPage";
 import AddTaskPage from "../components/AddTaskPage";
@@ -21,6 +22,7 @@ const AppRouter = () => (
                 <PrivateRoute path="/create" component={AddTaskPage}/>
                 <PrivateRoute path="/edit/:id" component={EditTaskPage}/>
                 <PrivateRoute path="/help" component={HelpPage}/>
+                <PrivateRoute path="/terms" component={TermsPage}/>
                 <PrivateRoute component={NotFoundPage}/>
             </Switch>
         </div>
