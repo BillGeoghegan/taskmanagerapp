@@ -19,13 +19,13 @@
     background: none !important;
 }
 
-.select-option{
+.select-option {
     width: 48%;
     display: inline-block;
     padding: 15px;
 }
 
-.select-dropdowns{
+.select-dropdowns {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -45,10 +45,16 @@
 
 .good {
     background: rgb(183, 243, 203);
+    padding: 10px;
+    border-radius: 5px;
 }
 .bad {
     background: rgb(235, 174, 174);
+    padding: 10px;
+    border-radius: 5px;
 }
 .neutral {
     background: rgb(165, 172, 172);
+    padding: 10px;
+    border-radius: 5px;
 }

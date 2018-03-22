@@ -22,9 +22,9 @@
     flex-direction: column;
     padding: $s-size;
     text-decoration: none;
-    transition: background .3s ease;
+    transition: background .5s ease;
     &:hover{
-        background: darken($light-grey, 1%);
+        background: darken($light-grey, 5%);
     }
     @media(min-width: $desktop-breakpoint) {
         align-items: center;
@@ -56,6 +56,7 @@
 
 .list-item__data {
     margin: $s-size 0 0 0;
+    white-space: nowrap;
     @media (min-width: $desktop-breakpoint) {
         margin: 0;
         padding-left: $s-size;
