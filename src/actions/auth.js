@@ -1,4 +1,4 @@
-import { firebase, googleAuthProvider } from '../firebase/firebase';
+import { firebase, googleAuthProvider, facebookAuthProvider } from '../firebase/firebase';
 import database from '../firebase/firebase';
 
 export const login = (uid) => ({
@@ -6,7 +6,7 @@ export const login = (uid) => ({
   uid
 });
 
-export const startLogin = (uid) => {
+export const startLoginGoogle = (uid) => {
   return () => {
     return firebase.auth().signInWithPopup(googleAuthProvider).then(function(result){
       const username = result.user.displayName;

@@ -8,8 +8,8 @@ test('should render LoginPage correctly', () => {
 });
 
 test('should call startLogout on button click', () => {
-    const startLogin = jest.fn();
-    const wrapper = shallow(<LoginPage startLogin={startLogin} />);
+    const startLoginGoogle = jest.fn();
+    const wrapper = shallow(<LoginPage startLoginGoogle={startLoginGoogle} />);
     wrapper.find('button').simulate('click');
-    expect(startLogin).toHaveBeenCalled();
+    expect(startLoginGoogle).toHaveBeenCalled();
 });

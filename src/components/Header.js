@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { startLogout } from '../actions/auth';
+import { startLogout, getUserProfile  } from '../actions/auth';
 import { firebase } from '../firebase/firebase';
 import UserInfo from './UserInfo';
 import { openMenu } from '../actions/animations';
@@ -9,14 +9,11 @@ import { openMenu } from '../actions/animations';
 export const Header = ({ startLogout }) => (
     <header className="header">    
         <span className="open-menu-button" id="openMenuButton" onClick={openMenu}>&#9776;</span>
-        <div className="content-container">
+        {/* <div className="content-container">
             <div className="header__content">
-                <Link className="header__title" to="/dashboard">
-                    <h1>Taskr</h1>
-                </Link>
-                <button className="button button__link" onClick={startLogout}>Logout</button>
             </div>
-        </div>
+        </div> */}
+        <img src={getUserProfile()} className="user-image-header"/>
     </header>
 );
 

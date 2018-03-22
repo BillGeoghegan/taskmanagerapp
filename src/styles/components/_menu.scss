@@ -69,23 +69,13 @@ body{
 
 .open-menu-button {
     color: #FFF;
-    font-size: 4rem;
+    font-size: 3rem;
     position: absolute;
-    padding: 10px;
-    padding-left: 15px;
+    padding: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
     cursor: pointer;
     transition: opacity 1s;
-}
-
-.created-by{
-    width: 100%;
-    white-space: nowrap;
-    text-align: center;
-    bottom: 80px;
-    padding: 5px;
-    color: #bed6f3;
-    background: #484052;
-    position: absolute;
 }
 
 @media(max-height: 450px) {

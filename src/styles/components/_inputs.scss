@@ -4,7 +4,6 @@
     padding: $s-size;
     font-size: $font-size-large;
     font-weight: 300;
-    padding: $s-size;
 }
 
 .select {
@@ -14,4 +13,17 @@
 .textarea {
     @extend .text-input;
     height: 10rem;
+}
+
+.DateInput {
+    background: none !important;
+}
+
+.header__content{
+    input, select, .DateRangePickerInput, input::placeholder{
+        background: #494e5a;
+        border: none;
+        color: #fff !important;
+        border-radius: 15px;
+    }
 }

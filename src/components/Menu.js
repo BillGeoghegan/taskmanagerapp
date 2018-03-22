@@ -20,6 +20,10 @@ export const Menu = ({ startLogout }) => (
             <i className="fas fa-question-circle"></i>
             &nbsp; Help
         </Link>
+        <Link to="/terms" onClick={closeMenuNav}>
+            <i className="fas fa-gavel"></i>
+            &nbsp; Terms
+        </Link>
         <a href="https://github.com/BillGeoghegan/taskmanagerapp" onClick={closeMenuNav}>
             <i className="fab fa-github-square"></i>
             &nbsp; GitHub
@@ -40,7 +44,6 @@ export const Menu = ({ startLogout }) => (
             <i className="fas fa-sign-out-alt"></i>
             &nbsp; Logout
         </a>
-        <p className="created-by">Created by Bill Geoghegan</p>
     </menu>
 );
 

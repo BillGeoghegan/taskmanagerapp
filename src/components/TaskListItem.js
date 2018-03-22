@@ -8,9 +8,9 @@ const TaskListItem = ({dispatch, id, description = '', note = '', createdAt = 0,
             <Link to={`/edit/${id}`} className="list-item">
                 <div>
                     <h3 className="list-item__title">{description}</h3>
-                    <span className="list-item__sub-title">Due {moment(dueDate).format('MMMM Do, YYYY')}</span>
+                    <span className="list-item__sub-title">{note}</span>
                 </div>
-                {/* <h3 className="list-item__data">{moment(dueDate).format('MMMM Do, YYYY')}</h3> */}
+                <h4 className="list-item__data">{moment(dueDate).format('MMMM Do, YYYY')}</h4>
             </Link>
     );
 }

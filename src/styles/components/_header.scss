@@ -1,5 +1,5 @@
 .header {
-    height: 80px;
+    height: 56px;
     background: linear-gradient(150deg,  #a09090, #818fb9);
 }
 
@@ -22,3 +22,8 @@
     }
 }
 
+.header-image {
+    margin: 0px;
+    margin-left: 80px;
+    height: 64px;
+}

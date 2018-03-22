@@ -9,7 +9,7 @@ export const TasksSummary = ({taskCount, tasksTotal}) => {
         return(
             <div className="page-header">
                 <div className="content-container">
-                    <h1 className="page-header__title">Viewing <span>{taskCount} Tasks</span></h1>
+                    <h1 className="page-header__title">Viewing <span>{taskCount}</span> Tasks</h1>
                     <div className="page-header__actions">
                         <Link className="button" to="/Create">Add Task</Link>
                     </div>
