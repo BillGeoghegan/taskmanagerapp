@@ -11,7 +11,7 @@ const TaskListItem = ({dispatch, id, description = '', note = '', createdAt = 0,
                 <span className="list-item__sub-title">{note}</span>
                 <br/><br/>{statusColor({status})}
             </div>
-            <h4 className="list-item__data"><span className="show-for-mobile">Due </span>{moment(dueDate).format('MMMM Do, YYYY')} {dateStatus({dueDate,description})}</h4>
+            <h4 className="list-item__data"><span className="show-for-mobile">Due </span>{moment(dueDate).format('MMMM Do, YYYY')}<br/>{dateStatus({dueDate,description})}</h4>
         </Link>
     );
 }
@@ -31,13 +31,10 @@ const statusColor = ({status}) => {
 const dateStatus = ({dueDate,description}) => {
     let overdueMessage = '(Overdue)';
     if(moment(dueDate).unix() < moment().unix()){
-        overdueMessage = '(Overdue)';
+        return '(Overdue '+moment(dueDate).fromNow()+')';
     }else{
-        overdueMessage = '(Due in '+moment(dueDate).toNow(true)+')';
+        return '(Due in '+moment(dueDate).toNow(true)+')';
     }
-    return(
-        overdueMessage
-    );
 };
 
 export default TaskListItem;

@@ -55,6 +55,7 @@
 }
 
 .list-item__data {
+    text-align: right;
     margin: $s-size 0 0 0;
     white-space: nowrap;
     @media (min-width: $desktop-breakpoint) {

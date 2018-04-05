@@ -5,8 +5,8 @@ import moment from 'moment';
 const filtersReducerDefaultState = {
     text: '',
     sortBy: 'date',
-    startDate: moment().startOf('month'),
-    endDate: moment().endOf('month')
+    startDate: moment().startOf('month').subtract(2, 'months'),
+    endDate: moment().endOf('month').add(1,'months')
 };
 // Reducer:
 export default (state = filtersReducerDefaultState, action) => {
