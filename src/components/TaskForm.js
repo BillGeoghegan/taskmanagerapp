@@ -105,7 +105,6 @@ export default class TaskForm extends React.Component {
                             value={this.state.category}
                             onChange={this.onCategoryChange}
                         >
-                            <option value=""></option>
                             <option value="Personal">Personal</option>
                             <option value="Professional">Professional</option>
                             <option value="Family">Family</option>
